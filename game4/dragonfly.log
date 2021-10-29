@@ -1,0 +1,14 @@
+16:26:36    0 ****************************************************
+16:26:36    0 ** Dragonfly version 4.15 **
+16:26:36    0 ** Game engine started **
+16:26:36    0 ****************************************************
+16:26:39   90 ResourceManager::loadSprite(): Loading sprite 'sprites/saucer-spr.txt'.
+16:26:39   90 ResourceManager::loadSprite(): Sprite 'saucer' loaded.
+16:26:39   90 ResourceManager::loadSprite(): Loading sprite 'sprites/ship-spr.txt'.
+16:26:39   90 ResourceManager::loadSprite(): Sprite 'ship' loaded.
+16:26:39   90 ResourceManager::loadSprite(): Loading sprite 'sprites/bullet-spr.txt'.
+16:26:39   90 ResourceManager::loadSprite(): Sprite 'bullet' loaded.
+16:26:39   90 ResourceManager::loadSprite(): Loading sprite 'sprites/explosion-spr.txt'.
+16:26:39   90 ResourceManager::loadSprite(): Sprite 'explosion' loaded.
+16:26:41   68 ****************************************************
+16:26:41   68 ** Game engine stopped **
