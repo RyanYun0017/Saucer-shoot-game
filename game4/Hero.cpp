@@ -7,6 +7,7 @@
 #include "GameManager.h"
 #include "EventStep.h" // to register for "Step" events
 #include "EventMouse.h"
+#include "GameOver.h"
 //#include "Reticle.h"
 
 // Define the constructor
@@ -37,7 +38,18 @@ Hero::Hero() {
 // Define the Destructor
 
 Hero::~Hero() {
-	GM.setGameOver();
+	// GM.setGameOver(); not using this code to end the game, since we already have the gameover class.
+	  // Create GameOver object.
+	new GameOver;
+
+	// Mark Reticle for deletion.
+	WM.markForDelete(p_reticle);
+
+	// Make a big explosion with particles.
+	df::addParticles(df::SPARKS, getPosition(), 2, df::BLUE);
+	df::addParticles(df::SPARKS, getPosition(), 2, df::YELLOW);
+	df::addParticles(df::SPARKS, getPosition(), 3, df::RED);
+	df::addParticles(df::SPARKS, getPosition(), 3, df::RED);
 }
 // Setup the eventhandler method for Hero
 int Hero::eventHandler(const df::Event *p_e) {

@@ -153,23 +153,28 @@
   <ItemGroup>
     <ClInclude Include="..\Bullet.h" />
     <ClInclude Include="..\Explosion.h" />
+    <ClInclude Include="..\GameOver.h" />
     <ClInclude Include="..\Hero.h" />
     <ClInclude Include="..\Reticle.h" />
     <ClInclude Include="..\Saucer.h" />
+    <ClInclude Include="..\Star.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\Bullet.cpp" />
     <ClCompile Include="..\Explosion.cpp" />
     <ClCompile Include="..\game.cpp" />
+    <ClCompile Include="..\GameOver.cpp" />
     <ClCompile Include="..\Hero.cpp" />
     <ClCompile Include="..\Reticle.cpp" />
     <ClCompile Include="..\Saucer.cpp" />
+    <ClCompile Include="..\Star.cpp" />
   </ItemGroup>
   <ItemGroup>
   </ItemGroup>
   <ItemGroup>
     <Text Include="..\sprites\bullet-spr.txt" />
     <Text Include="..\sprites\explosion-spr.txt" />
+    <Text Include="..\sprites\gameover-spr.txt" />
     <Text Include="..\sprites\saucer-spr.txt" />
     <Text Include="..\sprites\ship-spr.txt" />
   </ItemGroup>

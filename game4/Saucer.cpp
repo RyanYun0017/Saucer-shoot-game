@@ -24,7 +24,7 @@ Saucer::Saucer() {
 	setType("Saucer");
 
 	// Set speed in horizontal direction.
-	setVelocity(df::Vector(-1, 0)); // 1 space left every 4 frames --  I change the Speed of the Saucer to 1 space each frame. 
+	setVelocity(df::Vector(-0.5, 0)); // 1 space left every 4 frames --  I change the Speed of the Saucer to 1 space each frame. 
 
 	// Set starting location in middle of window.                             
 	/*int world_horiz = (int)WM.getBoundary().getHorizontal();
@@ -79,13 +79,7 @@ void Saucer::moveToStart() {
 
 	df::Vector temp_pos;
 
-	// With many saucers spawned in the begaininer, handle the case that differnet saucer collision with each other.
-	df::ObjectList collision_list = WM.getCollisions(this, temp_pos);
-
-	while (!collision_list.isEmpty()) {
-		temp_pos.setX(temp_pos.getX() + 1);
-		collision_list = WM.getCollisions(this, temp_pos);
-	}
+	
 
 	// Move the saucer to the right bound
 	float world_horiz = WM.getBoundary().getHorizontal();
@@ -98,6 +92,14 @@ void Saucer::moveToStart() {
 	// y is in vertical range
 
 	temp_pos.setY(rand() % (int)(world_vert - 1) + 1.0f);
+
+	// With many saucers spawned in the begaininer, handle the case that differnet saucer collision with each other.
+	df::ObjectList collision_list = WM.getCollisions(this, temp_pos);
+
+	while (!collision_list.isEmpty()) {
+		temp_pos.setX(temp_pos.getX() + 1);
+		collision_list = WM.getCollisions(this, temp_pos);
+	}
 
 	WM.moveObject(this, temp_pos);
 }

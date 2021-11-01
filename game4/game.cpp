@@ -9,6 +9,7 @@
 
 #include "Hero.h"
 #include "Saucer.h"
+#include "Star.h"
 
 // Function prototypes.
 void loadResources(void);
@@ -48,6 +49,7 @@ void loadResources(void) {
     RM.loadSprite("sprites/ship-spr.txt", "ship");
     RM.loadSprite("sprites/bullet-spr.txt", "bullet");
     RM.loadSprite("sprites/explosion-spr.txt", "explosion");
+    RM.loadSprite("sprites/gameover-spr.txt", "gameover");
 }
 
 // Populate world with some objects.
@@ -58,5 +60,9 @@ void populateWorld(void) {
         new Saucer;
    }
     new Hero;
+
+    // Create some Stars.
+    for (int i = 0; i < 16; i++)
+        new Star;
 
 }
