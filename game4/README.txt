@@ -52,6 +52,5 @@ Edited by Haiyang Yun
     ## Changed the speed of the Saucer to 1 space each frame 
     ## In MoveToStart(), edit the starting position of x right at the right bound of the Window. 
 
-# Game 11 Editing
-
+# Game 3 Editing
 
